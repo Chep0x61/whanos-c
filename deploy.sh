@@ -8,10 +8,10 @@ fi
 if [[ -f ./app/pom.xml ]]; then
         arr+=("java")
 fi
-if [[ -f tsconfig.json && -f package.json ]]; then
-        arr+=("typescript")
+if [[ -f package.json ]] && [[ -f tsconfig.json ]]; then
+        language+=("typescript")
 elif [[ -f package.json ]]; then
-        arr+=("javascript")
+        language+=("javascript")
 fi
 if [[ -f requirements.txt ]]; then
         arr+=("python")
